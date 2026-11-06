@@ -51,8 +51,7 @@ The existing hero portraits (`public/group-img.png` and `public/hero_img_mobile.
 
 ## Licensing
 
-The repository's `LICENSE` file contains the MIT License and a copyright notice naming Mostafa Tarif. Preserve that notice and the license terms when redistributing material covered by it; no ownership transfer is asserted here.
+The repository's `LICENSE` file contains the MIT License. Preserve that notice and the license terms when redistributing material covered by it; no ownership transfer is asserted here.
 
 Third-party packages and assets have separate terms. In particular, GSAP 3.12.5 declares GSAP's Standard License, not MIT. The [GSAP Standard License](https://gsap.com/standard-license) permits website and web-application use, including commercial use, but restricts use in competing visual animation-builder products and removal or alteration of GSAP proprietary notices. Review the current terms before redistribution or changes to GSAP use.
 
-Add only verified GDGC MCET contact, social, domain, and deployment details when they are provided by an authorized maintainer.

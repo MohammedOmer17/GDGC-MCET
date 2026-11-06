@@ -413,8 +413,8 @@ html {
 @media (max-width: 768px) {
   #loader-counter {
     font-size: 13vw;
-    padding-right: 6.5vw;
-    padding-bottom: 11vw;
+    padding-right: 8vw;
+    padding-bottom: 13vw;
   }
 
   #hero-section {
@@ -522,6 +522,11 @@ html {
 }
 
 @media (min-width: 768px) and (max-width: 1023.98px) {
+  #loader-counter {
+    padding-right: 5vw;
+    padding-bottom: 4vw;
+  }
+
   #hero-img {
     height: 72svh;
   }
