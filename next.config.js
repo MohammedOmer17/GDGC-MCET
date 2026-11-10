@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   images: {
-    formats: ['image/webp'],
-    // Reuse generated sizes between visits instead of frequently re-encoding.
-    minimumCacheTTL: 86400,
+    unoptimized: true,
   },
   webpack(config) {
     config.module.rules.push({

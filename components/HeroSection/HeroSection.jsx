@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useLayoutEffect, useRef } from "react";
-import Image, { getImageProps } from "next/image";
+import Image from "next/image";
 import gsap from "gsap";
 import LiquidEther from "../LiquidEther/LiquidEther";
 
@@ -9,42 +9,16 @@ import LiquidEther from "../LiquidEther/LiquidEther";
 // (otherwise LiquidEther's useEffect would tear down/rebuild WebGL each render).
 const HERO_LIQUID_COLORS = ["#D9E6FF"];
 
-const { props: heroDesktopImage } = getImageProps({
-  src: "/home-page-hero-1.png",
-  alt: "Group portrait",
-  width: 1280,
-  height: 720,
-  sizes: "100vw",
-  loading: "eager",
-  fetchPriority: "high",
-  quality: 82,
-});
-const { props: heroDarkImage } = getImageProps({
-  src: "/new.png",
-  alt: "Group portrait",
-  width: 1280,
-  height: 720,
-  sizes: "100vw",
-  loading: "eager",
-  fetchPriority: "high",
-  quality: 82,
-});
-const { props: heroMobileDarkImage } = getImageProps({
-  src: "/home-page-white(mobile).png",
-  alt: "Group portrait",
-  width: 1080,
-  height: 1920,
-  sizes: "100vw",
-  quality: 82,
-});
-const { props: heroMobileLightImage } = getImageProps({
-  src: "/home-page-black(mobile).png",
-  alt: "Group portrait",
-  width: 1080,
-  height: 1920,
-  sizes: "100vw",
-  quality: 82,
-});
+const HERO_IMAGES = {
+  mobile: {
+    dark: "/home-page-white(mobile).png",
+    light: "/home-page-black(mobile).png",
+  },
+  desktop: {
+    dark: "/new.png",
+    light: "/home-page-hero-1.png",
+  },
+};
 
 const SplitChars = ({ text, className, id }) => {
   return (
@@ -405,13 +379,21 @@ const HeroSection = () => {
         {/* Portrait image (foreground, moves more) */}
         <div className="hero-layer hero-image-layer" data-depth="0.50" style={{ zIndex: 50 }}>
           <div id="hero-img" ref={imgRef}>
-            <picture>
+            <picture key={isDarkTheme ? "hero-dark" : "hero-light"}>
               <source
                 media="(max-width: 1023.98px)"
-                srcSet={isDarkTheme ? heroMobileDarkImage.srcSet : heroMobileLightImage.srcSet}
-                sizes={isDarkTheme ? heroMobileDarkImage.sizes : heroMobileLightImage.sizes}
+                srcSet={isDarkTheme ? HERO_IMAGES.mobile.dark : HERO_IMAGES.mobile.light}
               />
-              <img {...(isDarkTheme ? heroDarkImage : heroDesktopImage)} draggable={false} />
+              <img
+                src={isDarkTheme ? HERO_IMAGES.desktop.dark : HERO_IMAGES.desktop.light}
+                alt="Group portrait"
+                width={1280}
+                height={720}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+                draggable={false}
+              />
             </picture>
           </div>
         </div>

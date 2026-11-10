@@ -5,7 +5,7 @@ const eventsData = [
     description:
       "A 24-hour national hackathon for bold ideas and real-world innovation.",
     image: "/event-hacknovate.webp",
-    mobileImage: "/event-hacknovate-mobile.webp",
+    mobileImage: "/HACKNOVATE(MOBILE).jpg",
     imageAlt: "Participants collaborating during Hacknovate 2025",
   },
   {
@@ -14,7 +14,7 @@ const eventsData = [
     description:
       "Women in tech turned creative ideas into interactive web experiences.",
     image: "/event-she-builds.webp",
-    mobileImage: "/event-she-builds-mobile.webp",
+    mobileImage: "/SHE_BUILD(MOBILE).jpg",
     imageAlt: "Students taking part in the She Builds event",
   },
   {
@@ -31,7 +31,7 @@ const eventsData = [
     description:
       "A community celebration of technology, collaboration, and innovation.",
     image: "/event-vibe-castle.webp",
-    mobileImage: "/event-vibe-castle-mobile.webp",
+    mobileImage: "/VIBE_CASTLE(MOBILE).JPG",
     imageAlt: "Students enjoying the VIBE CASTLE community event",
   },
   {
@@ -40,7 +40,7 @@ const eventsData = [
     description:
       "A hands-on workshop building full-stack apps and web-based AI.",
     image: "/event-build-with-ai.webp",
-    mobileImage: "/event-build-with-ai-mobile.webp",
+    mobileImage: "/BUILD_WITH_AI(MOBILE).JPG",
     imageAlt: "Students building AI projects at the Build with AI workshop",
   },
 ];

@@ -26,10 +26,10 @@ function EventCard({ event, index, preload = false }) {
         <div className="events-image-fallback" aria-hidden="true" />
         {imageAvailable && (
           <picture>
-            {mobile && (
+            {event.mobileImage && (
               <source
                 media="(max-width: 767px)"
-                srcSet={mobile.srcSet}
+                srcSet={mobile?.srcSet || event.mobileImage}
                 sizes={sizes}
               />
             )}
